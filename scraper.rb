@@ -29,8 +29,8 @@ def fetch_urls
       marketcap = element.search(".market-cap").text.strip
       price = element.search(".price").text.strip.gsub(/[^\d\.]/, '').to_f
       volume = element.search(".volume").text.strip.gsub(/[^\d\.]/, '').to_f
-      cirulating_supply = element.search(".circulating-supply").text.strip.gsub(/[^\d\.]/, '').to_f
-      result_coins << {name: name, url: url, marketcap: marketcap, price: price, volume: volume, cirulating_supply: cirulating_supply}
+      circulating_supply = element.search(".circulating-supply").text.strip.gsub(/[^\d\.]/, '').to_f
+      result_coins << {name: name, url: url, marketcap: marketcap, price: price, volume: volume, circulating_supply: circulating_supply}
       # byebug
     end
   end
