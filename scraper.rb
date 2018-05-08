@@ -36,33 +36,3 @@ def fetch_urls
 end
 
 p fetch_urls
-
-#   html_file = open(url).read
-#   html_doc = Nokogiri::HTML(html_file)
-#   result = []
-
-#   title = html_doc.search("h1").text.strip
-#   title = title[0..title.length-8]
-#   year = html_doc.search("h1 a").text.strip
-#   # itle = html_doc.search("h1").text.match
-#   summary = html_doc.search(".summary_text").text.strip
-#   director = html_doc.search('span[itemprop="director"]').text.strip
-#   actors = html_doc.search('span[itemprop="actors"]')
-#   cast = []
-#   actors.each do |actor|
-#     cast << actor.text.strip.split(",").first
-#   end
-
-#   hash = {
-#     title: title,
-#     year: year,
-#     storyline: summary,
-#     director: director,
-#     cast: cast
-#   }
-
-#   p hash
-
-# end
-
-# get_movie_info("https://www.imdb.com/title/tt0111161/")
