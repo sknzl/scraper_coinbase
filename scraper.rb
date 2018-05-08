@@ -24,11 +24,13 @@ def fetch_urls
   coins_clean.each do |coin|
     html_doc.search("#id-#{coin}").each do |element|
       name = coin
+      url_field = element.search(".currency-name-container")
+      url = url_field[0]["href"]
       marketcap = element.search(".market-cap").text.strip
       price = element.search(".price").text.strip.gsub(/[^\d\.]/, '').to_f
       volume = element.search(".volume").text.strip.gsub(/[^\d\.]/, '').to_f
       cirulating_supply = element.search(".circulating-supply").text.strip.gsub(/[^\d\.]/, '').to_f
-      result_coins << {name: name, marketcap: marketcap, price: price, volume: volume, cirulating_supply: cirulating_supply}
+      result_coins << {name: name, url: url, marketcap: marketcap, price: price, volume: volume, cirulating_supply: cirulating_supply}
       # byebug
     end
   end
