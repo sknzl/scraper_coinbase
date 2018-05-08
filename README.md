@@ -1,4 +1,4 @@
-# scraper_coinbase
+# scraper_coinmarketcap
 Scraper to retrieve all coin values from the frontpage of https://coinmarketcap.com/ \
 Result is stored in an array of hashes with:<br>
 name               #name of the coin <br>
